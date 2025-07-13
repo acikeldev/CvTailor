@@ -1,5 +1,7 @@
 # CVTailor
 
+![CV Tailor Bot](assets/robot_tailor.png)
+
 An AI-powered job search and CV optimization platform that helps job seekers discover relevant opportunities on LinkedIn, analyze their CV against job requirements, and generate tailored CVs for specific positions.
 
 ## 🚀 Features
