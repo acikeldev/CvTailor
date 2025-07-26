@@ -8,7 +8,7 @@ namespace CvTailor.Api.Services
 {
     public class CvService : ICvService
     {
-        public async Task<object> ReadCv(IFormFile file)
+        public async Task<string> ReadCv(IFormFile file)
         {
             var tempFilePath = Path.GetTempFileName();
             using(var stream = new FileStream(tempFilePath, FileMode.Create))
@@ -27,7 +27,7 @@ namespace CvTailor.Api.Services
 
             File.Delete(tempFilePath);
 
-            return new {message="CV uploaded successfully",content=sb.ToString()};
+            return sb.ToString();
         }
     }
 }

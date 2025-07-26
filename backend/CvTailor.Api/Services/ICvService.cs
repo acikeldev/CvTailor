@@ -5,6 +5,6 @@ namespace CvTailor.Api.Services
 {
     public interface ICvService
     {
-        Task<object> ReadCv(IFormFile file);
+        Task<string> ReadCv(IFormFile file);
     }
 }
