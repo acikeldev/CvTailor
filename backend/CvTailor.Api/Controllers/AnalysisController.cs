@@ -6,19 +6,19 @@ namespace CvTailor.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CvUploadController : ControllerBase
+    public class AnalysisController : ControllerBase
     {
         private readonly ICvService _cvService;
         private readonly ILlmService _llmService;
 
-        public CvUploadController(ICvService cvService, ILlmService llmService)
+        public AnalysisController(ICvService cvService, ILlmService llmService)
         {
             _cvService = cvService;
             _llmService = llmService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> UploadCv([FromForm] IFormFile file)
+        [HttpPost("cv-suggestion")]
+        public async Task<IActionResult> AnalyzeCv([FromForm] IFormFile file)
         {
             if (file ==null || file.Length == 0)
             {
@@ -36,6 +36,21 @@ namespace CvTailor.Api.Controllers
                 return NotFound("Could not extract a valid response text from Gemini.");
             }
             return Ok(new { geminiComment = geminiText });
+        }
+
+        [HttpPost("job-match")]
+        public async Task<IActionResult> MatchCvToJob([FromForm] IFormFile file, [FromForm] string jobDescription)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest("No file uploaded");
+            }
+
+            var cvContent = await _cvService.ReadCv(file);
+
+            var jobMatchResponse = await _llmService.MatchCvToJob(cvContent, jobDescription);
+
+            return Ok(jobMatchResponse);
         }
     }
 }

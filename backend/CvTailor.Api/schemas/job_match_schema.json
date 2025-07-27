@@ -1,0 +1,30 @@
+{
+    "type": "OBJECT",
+    "properties": {
+      "matchScore": {
+        "type": "NUMBER",
+        "description": "A score from 1 to 100 indicating how well the CV matches the job description."
+      },
+      "summary": {
+        "type": "STRING",
+        "description": "A concise summary of the candidate's fit for the role."
+      },
+      "missingKeywords": {
+        "type": "ARRAY",
+        "items": { "type": "STRING" },
+        "description": "A list of important keywords from the job description that are missing in the CV."
+      },
+      "suggestedImprovements": {
+        "type": "ARRAY",
+        "items": {
+          "type": "OBJECT",
+          "properties": {
+            "section": { "type": "STRING" },
+            "recommendation": { "type": "STRING" }
+          },
+          "required": ["section", "recommendation"]
+        },
+        "description": "Specific, actionable suggestions to improve the CV for this job."
+      }
+    }
+  }

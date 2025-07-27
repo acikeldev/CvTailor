@@ -1,0 +1,13 @@
+    Analyze the provided CV content against the given Job Description.
+    - Identify key skills and qualifications from the job description.
+    - Score the CV's relevance to the job on a scale of 1 to 100.
+    - Provide a concise summary of why the candidate is a good or poor fit.
+    - List specific missing keywords or skills from the CV.
+    - Suggest concrete improvements to the CV to better align with this specific job description.
+      Suggestions must be there for both editing the cv and for future improvements for the candidate learning skill etc.
+      For each suggested improvement, always provide a specific, actionable recommendation as a string. If you cannot suggest anything, write "No suggestion" (do not use null).
+    CV Content:
+    {cvContent}
+
+    Job Description:
+    {jobDescription}
