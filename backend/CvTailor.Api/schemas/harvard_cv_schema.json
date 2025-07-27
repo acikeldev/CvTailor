@@ -1,0 +1,132 @@
+{
+  "type": "object",
+  "properties": {
+    "personalInfo": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string"},
+        "email": {"type": "string"},
+        "phone": {"type": "string"},
+        "address": {"type": "string"},
+        "linkedin": {"type": "string"},
+        "website": {"type": "string"}
+      },
+      "required": ["name", "email"]
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {"type": "string"},
+          "degree": {"type": "string"},
+          "field": {"type": "string"},
+          "graduationDate": {"type": "string"},
+          "gpa": {"type": "string"},
+          "relevantCourses": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "honors": {"type": "string"}
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {"type": "string"},
+          "position": {"type": "string"},
+          "startDate": {"type": "string"},
+          "endDate": {"type": "string"},
+          "location": {"type": "string"},
+          "description": {"type": "string"},
+          "achievements": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "technologies": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "object",
+      "properties": {
+        "technical": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "soft": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "languages": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "technologies": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "url": {"type": "string"},
+          "githubUrl": {"type": "string"},
+          "startDate": {"type": "string"},
+          "endDate": {"type": "string"}
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "issuer": {"type": "string"},
+          "date": {"type": "string"},
+          "expiryDate": {"type": "string"},
+          "url": {"type": "string"}
+        }
+      }
+    },
+    "volunteer": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "organization": {"type": "string"},
+          "role": {"type": "string"},
+          "startDate": {"type": "string"},
+          "endDate": {"type": "string"},
+          "description": {"type": "string"}
+        }
+      }
+    },
+    "publications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string"},
+          "authors": {"type": "string"},
+          "journal": {"type": "string"},
+          "date": {"type": "string"},
+          "url": {"type": "string"}
+        }
+      }
+    }
+  },
+  "required": ["personalInfo"]
+} 

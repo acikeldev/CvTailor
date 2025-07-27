@@ -1,0 +1,14 @@
+Convert the following CV text into Harvard format JSON structure. 
+Extract all relevant information and organize it according to the Harvard CV template.
+
+CV Text:
+{cvText}
+
+IMPORTANT RULES:
+1. Extract ONLY information that is explicitly present in the CV text
+2. Do not add or create information that is not in the original CV
+3. If a section is missing from the original CV, leave it empty or with minimal placeholder data
+4. Maintain the exact information from the original CV
+5. Only organize and structure the existing content
+
+Return the CV data in Harvard format JSON structure. 

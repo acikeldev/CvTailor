@@ -31,10 +31,15 @@ const Hero = () => {
                 className="text-lg"
                 onClick={() => navigate('/analysis')}
               >
-                Get Started Free →
+                CV Analysis →
               </Button>
-              <Button variant="primary-outline" size="lg" className="text-lg">
-                Watch Demo
+              <Button 
+                variant="primary-outline" 
+                size="lg" 
+                className="text-lg"
+                onClick={() => navigate('/builder')}
+              >
+                Harvard CV Builder →
               </Button>
             </div>
 

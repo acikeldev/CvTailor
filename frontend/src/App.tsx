@@ -8,6 +8,7 @@ import FAQ from './components/sections/FAQ';
 import CTASection from './components/sections/CTASection';
 import Footer from './components/layout/Footer';
 import CvAnalysis from './pages/CvAnalysis';
+import CvBuilder from './pages/CvBuilder';
 
 // Landing Page Component
 const LandingPage = () => {
@@ -31,6 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/analysis" element={<CvAnalysis />} />
+        <Route path="/builder" element={<CvBuilder />} />
       </Routes>
     </Router>
   );

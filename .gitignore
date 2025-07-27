@@ -198,3 +198,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# TODO and Development Files
+TODO.txt
+*.todo

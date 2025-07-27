@@ -8,6 +8,7 @@ builder.Services.AddCors();
 builder.Services.AddControllers();
 builder.Services.AddScoped<ICvService, CvService>();
 builder.Services.AddScoped<ILlmService, GeminiLlmService>();
+builder.Services.AddScoped<ICvConversionService, CvConversionService>();
 builder.Services.Configure<GeminiOptions>(builder.Configuration.GetSection("Gemini"));
 builder.Services.AddHttpClient("Gemini");
 

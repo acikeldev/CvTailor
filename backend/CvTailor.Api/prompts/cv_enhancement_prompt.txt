@@ -1,0 +1,36 @@
+Enhance the following Harvard CV with the provided AI suggestions. 
+IMPORTANT: Only improve and refine EXISTING content. DO NOT add new sections, experiences, projects, or skills that are not already present in the original CV.
+
+Current CV:
+{cvJson}
+
+AI Enhancement Suggestions:
+{suggestionsText}
+
+CRITICAL RULES:
+1. ONLY enhance existing content - do not add new items
+2. Improve action verbs in existing experience descriptions
+3. Add quantifiable achievements to existing experiences where possible
+4. Enhance existing skills with better keywords and industry terms
+5. Optimize existing project descriptions to highlight impact
+6. Strengthen existing summary statements
+7. Keep the exact same structure and number of items
+8. Do not create new experiences, projects, or skills
+9. Only modify the content quality, not the quantity
+
+Enhancement Guidelines:
+- Replace weak action verbs with strong ones (e.g., 'Developed' instead of 'Did')
+- Add specific numbers and metrics to existing achievements
+- Use industry-standard terminology for existing skills
+- Make existing project descriptions more impactful
+- Improve existing summary statements
+- Maintain professional tone and Harvard format
+
+After enhancing the CV, provide a summary of changes made in the following format:
+
+CHANGES_SUMMARY:
+- Section: [section name], Field: [field name], Change: [brief description of what was improved]
+- Section: [section name], Field: [field name], Change: [brief description of what was improved]
+...
+
+Return the enhanced CV data in Harvard format JSON structure. 
