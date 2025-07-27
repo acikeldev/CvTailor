@@ -70,10 +70,10 @@ public class GeminiLlmService : ILlmService
             throw;
         }
     }
-    public async Task<GeminiApiResponse> CommentateCv(string cvContent)
+    public async Task<CvAnalysisResponse> CommentateCv(string cvContent)
     {
         string prompt  = _cvPrompt.Replace("{cvContent}", cvContent);
-        return await CallGemini<GeminiApiResponse>(prompt, _cvSchema);
+        return await CallGemini<CvAnalysisResponse>(prompt, _cvSchema);
     }
 
     public async Task<JobMatchResponse> MatchCvToJob(string cvContent, string jobDescription)

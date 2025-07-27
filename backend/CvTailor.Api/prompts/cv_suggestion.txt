@@ -1,4 +1,17 @@
-Analyze the following CV content and provide feedback based on ATS standards.
+You are an expert CV analyst and career coach. Analyze the following CV content and provide comprehensive feedback in the specified JSON format.
 
 CV Content:
 {cvContent}
+
+Please analyze this CV and provide:
+1. Overall Assessment with strengths and weaknesses
+2. Specific suggestions for improvement organized by CV sections
+
+Focus on:
+- ATS (Applicant Tracking System) optimization
+- Content clarity and impact
+- Professional presentation
+- Skills and experience alignment
+- Grammar and formatting
+
+Return your analysis in the exact JSON format specified by the schema.

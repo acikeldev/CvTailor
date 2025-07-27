@@ -27,15 +27,9 @@ namespace CvTailor.Api.Controllers
 
             var cvContent =  await _cvService.ReadCv(file);
 
-            var geminiResponse = await _llmService.CommentateCv(cvContent);
+            var cvAnalysisResponse = await _llmService.CommentateCv(cvContent);
 
-            var geminiText = geminiResponse.Candidates?.FirstOrDefault()?.Content?.Parts?.FirstOrDefault()?.Text;
-
-            if (string.IsNullOrEmpty(geminiText))
-            {
-                return NotFound("Could not extract a valid response text from Gemini.");
-            }
-            return Ok(new { geminiComment = geminiText });
+            return Ok(cvAnalysisResponse);
         }
 
         [HttpPost("job-match")]
